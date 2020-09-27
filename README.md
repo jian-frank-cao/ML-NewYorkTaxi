@@ -31,6 +31,7 @@ print('{} columns'.format(data.shape[1]))
 #### 1. Plot a histogram of the number of the trip distance (“Trip Distance”).
 
 There are many outliers in trip distance variable. Here is how we handle them in this distribution fitting step:
+
     1. Extremely large values (as large as 600 miles):          Many are entry errors. Keep values in [Q1-3×IQR, Q3+3×IQR] and use                                                                 fitted distribution to determine exactly IQR later in data cleaning step
     
     2. Zeros:                                                   Some are errors and some are missing values. Exclude them in distribution                                                            fitting step and handle them in data cleaning step
@@ -1374,10 +1375,15 @@ print(pd.DataFrame(p_val, columns = ['w1', 'w2','w3','w4','w5',], index = ['w1',
 According to p-values of the two-sample t test, except week 2 and week 3, all other weeks have p-values less than 0.01 threshold, which means we can reject the null hypothesis and conclude that the average trip speed in those weeks are significantly different with 99% certainty. The p-values between week 2 and week 3 is 0.69, which means we failed to reject the null hypothesis and cannot conclude that whether these two weeks have same average trip speed or not. We can summarize that most weeks have different average trip speed. Why is that?
 
 We introduce some additional data from public reports:
+
     1. Daily low temperature (℉).
+    
     2. Daily high temperature (℉).
+    
     3. Daily Rainfall (Inch).
+    
     4. Holiday (Labor Day)
+    
 Now let's have a look at these new features and how they affect average trip speed.
 
 
