@@ -1610,15 +1610,23 @@ OLS_regressor2.summary()
 <tr>
   <th>Kurtosis:</th>        <td>242.268</td>   <th>  Cond. No.          </th>    <td>    888.</td>   
 </tr>
-
+</table><br/>
 
 
 In this multiple linear regression model, every estimated coefficients are significantly non-zero at 99% confident level. There is no multi-colinearity problem and the adjusted R square value is 0.798, which means this model explained 79.8% of total variance within the average trip speed data. Let's discuss the implications of these coefficients one by one：
+
     1. For a long-distance trip, the taxi drivers tend to drive faster. The airport trips are on average 4.08 mph faster than non-airport trips. This can be explained by long distance, and less traffic near the airports.
+    
     2. For taxis using Creative Mobile Technologies' meters, the average trip speed is 0.14 mph faster than those using VeriFone Inc's.
+    
     3. Street-hail trips are 0.13 mph slower than dispatch trips. It may because of relatively short distance and heavy downtown traffic.
+    
     4. Manhattan trips tend to be slower due to the heavy traffic.
+    
     5. Trips in weekends or on holidays tend to be faster since people travel further if they don't go to work. In addition, in weekdays, the city is fully functional hence more active traffic.
+    
     6. When temperature is higher, the average trip speed is faster.
+    
     7. Rainfall significantly decreases traffic speed.
+    
     8. Every hour away from morning 5 AM, the taxis are 0.26 mph slower in average speed.
