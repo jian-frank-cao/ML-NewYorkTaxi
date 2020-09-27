@@ -1610,7 +1610,6 @@ OLS_regressor2.summary()
 <tr>
   <th>Kurtosis:</th>        <td>242.268</td>   <th>  Cond. No.          </th>    <td>    888.</td>   
 </tr>
-</table><br/><br/>Warnings:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
 
 
